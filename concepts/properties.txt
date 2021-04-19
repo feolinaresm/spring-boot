@@ -1,0 +1,12 @@
+Documentación al respecto: https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+
+Podemos tener diferentes propiedades según el entorno que deseemos, el archivo principal contendrá las propiedades que se
+comparten sin importar el entorno "application.properties"
+
+para definirle a este qué propiedades de entorno usaremos, lo especificamos con la propiedad "spring.profiles.active=(texto despues del guion en nuestro archivo .properties personalizado)"
+
+Definir el context path de la aplicaión:
+server.servlet.context-path=/spring/api/v1
+
+Definir el puerto:
+server.port=8090

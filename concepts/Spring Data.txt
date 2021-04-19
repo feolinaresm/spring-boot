@@ -1,0 +1,3 @@
+Este es un proyecto de Spring que implementa JPA, este contiene internamente varios proyectos como
+Spring Data JPA, JPA Repository, CrudRepository y PagingAndSortingRepository, el proposito de este es reducir el tiempo en tareas
+repetitivas como son el acceder a la base de datos, provee de auditorias transparente, para saber cuando se actualizó la base de datos

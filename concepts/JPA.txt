@@ -1,0 +1,10 @@
+JPA no es más que un standard/reglas que se aplica a quellos frameworks o librerias de tipo "ORM Object relational mapping" que
+son quienes interactuan con la base de datos mediante objetos de clase
+
+Para dicho fin, JPA utiliza anotaciones como estas:
+@Entity //Le indica a una clase java que está representando una tabla
+@Table //Recibe el nombre de la tabla a la cual está mapeando la clase
+@Column //Atributos de nuestra clase, no es obligatoria, y solo debemos usarla cuando el nombre del atributo no es igual al de la columna que deseamos que mapee
+@Id & @EmbededId //Representan la clave primaria de nuestra tabla en la clase, la primera se usa cuando es una llave primaria sencilla y la segunda cuando es una clave primaria compuesta
+@GenerateValue //Genera automaticamente valores para las claves primarias de nuestras clases
+@OneToMany & @ManyToOne //Representa relaciones como en las tablas

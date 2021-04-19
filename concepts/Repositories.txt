@@ -1,0 +1,5 @@
+Existen varios tipos de repositorio en Spring, con las cuales podemos realizar diferentes peticiones:
+
+* CrudRepository: Operaciones de tipo CRUD
+* PagingAndSortRepository: Operaciones de tipo CRUD en conjunto con paginamiento y ordenamiento
+* JPARepository: Todo lo anterior sumado a operaciones como Flush, que combina y guarda todo en memoria sin que otras entidades o entornos vean esos cambios en la base de datos
