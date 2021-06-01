@@ -1,0 +1,7 @@
+La inyección de dependencias consiste en pasar la dependencia a la clase que lo va a utilizar en lugar de crearlo internamente
+
+* Támbien existe otro concepto que se conoce como IoC (Inversión de Control) que consiste en seder el control de las dependencias a un framework
+como en este caso Spring con sus anotación @Autowired, el cual crea intancias de objeto que se conocen como build o components
+
+Para poder hacer uso de está herramienta debemos llamar la anotación @Autowired de Spring y una condición para que esta funcione es
+que el objeto o clase que queremos instanciar, sea un componente de Spring

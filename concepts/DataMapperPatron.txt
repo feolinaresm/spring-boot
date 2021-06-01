@@ -1,0 +1,14 @@
+El patrón Data Mapper consiste en traducir nuestras tablas de la base de datos a objetos que representen la misma pero de forma distinta, ejemplo:
+Si en nuestra base de datos la tabla y sus columnas están en ingles, el objeto que las representará en nuestro código, deberia de tenerlas en ingles, esto
+evita que expongamos la base de datos y aumentemos la seguridad del aplicativo
+
+Ventajas:
+* Desacoplamos el API de una base de datos puntual, puesto que los objetos son representacionales y si se hace el cambio de base de datos
+podriamos simplemente cambiar aquel al que representa cada atributo y no tener que modificar el codigo en todas aquellas partes en que haya sido llamado dicho objeto
+* Al poder omitir aquellas columnas que no necesitamos no tendremos campos innecesarios en nuestro API, pues solo tienen sentido en la base de datos o la capa de la persistencia
+* No mezclar idiomas en nuestro aplicativo
+
+Para todo esto podemos usar una herramienta llamada MapStruct la cual podremos encontrar en: https://mapstruct.org/ e instalamos su respectivo plugin para IntelliJ IDEA
+
+Para poner en practica lo mencionado anteriormente, debemos crear un paquete que contenga los conversores que se encargarán de
+traducir nuestros objetos de tipo entity a nuestros objetos de dominio

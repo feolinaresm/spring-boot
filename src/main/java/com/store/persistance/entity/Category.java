@@ -12,13 +12,13 @@ public class Category {
     @Column(name = "id_categoria")
     private Integer categoryId;
 
+    @Column(name = "descripcion")
     private String description;
 
     @Column(name = "estado")
     private Boolean status;
 
-    @OneToMany(mappedBy = "category") //Debido a que en esta ocasión quien puede contener muchos elementos de la otra clase es la actual, usaremos una lista para que sea capaz de contenerlos
-    //Category es el nombre del atributo que creamos para representar la relación en la clase/tabla Product, esto con la finalidad de respaldar y afirmar la relación
+    @OneToMany(mappedBy = "category") //Debido a que en esta ocasión quien puede contener muchos elementos de la otra clase es la actual, usaremos una lista para que sea capaz de contenerlos. Category es el nombre del atributo que creamos para representar la relación en la clase/tabla Product, esto con la finalidad de respaldar y afirmar la relación
     private List<Product> products;
 
     public Integer getCategoryId() {
@@ -43,5 +43,13 @@ public class Category {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

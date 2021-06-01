@@ -31,7 +31,7 @@ public class Purchase {
     @JoinColumn(name = "id", insertable = false, updatable = false) //Nuevamente, esto se hace con el fin de no permitir modificar la tabla clientes a traves de esta relación
     private Client client;
 
-    @OneToMany(mappedBy = "purchase")
+    @OneToMany(mappedBy = "purchase", cascade = {CascadeType.ALL}) //Esto quiere decir que todos los procesos que se hagan en la base de datos en cuanto a una compra, van a incluir en cascada sus productos
     private List<ProductPurchases> products;
 
     public Integer getPurchaseId() {
@@ -80,5 +80,21 @@ public class Purchase {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<ProductPurchases> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<ProductPurchases> products) {
+        this.products = products;
     }
 }

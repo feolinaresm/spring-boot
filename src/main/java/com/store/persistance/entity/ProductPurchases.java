@@ -20,7 +20,8 @@ public class ProductPurchases {
     private Boolean status;
 
     @ManyToOne
-    @JoinColumn(name = "id_compra", insertable = true, updatable = true)
+    @MapsId("purchaseId") //Esta anotación tambien está relacionada con la actualización en cascada para poder identificar a que compra equivale
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Purchase purchase;
 
     @ManyToOne

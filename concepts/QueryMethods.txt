@@ -1,0 +1,12 @@
+En aquellos casos en los que necesitamos realizar una consulta misma que no sea posible hacer mediante los repositorios de Spring Data
+haremos uso de los Query Methods que nos permiten realizar consultas personalizadas sin SQL, esto simplemente nombrando de metodos
+usando una nomenclatura particular.
+
+* Podemos retornar objetos de tipo Optional<T> para permitir su integración con la programación funcional
+
+Ejemplos:
+Con SQL:
+SELECT * FROM products WHERE id = ? ORDER BY name ASC;
+
+Con Query Methods:
+findByIdOrderByNameAsc(int id); //Aqui estamos haciendo lo mismo que arriba puesto que definimos la acción dentro del nombre del metodo en si
