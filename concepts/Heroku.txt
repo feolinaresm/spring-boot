@@ -1,0 +1,7 @@
+Heroku ya tiene unas variables de entorno que podemos llamar en nuestro archivo de application.properties
+asi evitamos tener que definirlas de forma manual
+
+server.port=${PORT}
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
