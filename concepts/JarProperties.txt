@@ -1,0 +1,3 @@
+-Xmx2058m //Define la memoria que queremos asignar a nuestro aplicativo
+-Dspring.profiles.active=pdn //Le decimos a nuestro aplicativo que se comporte como en el ambiente de producción que definimos
+-Dserver.port=88

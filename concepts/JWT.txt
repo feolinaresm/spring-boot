@@ -1,0 +1,7 @@
+Los JWT o JSON Web Tokens son un estandar de crear tokens de seguridad que viajarán
+a travez de el header de la petición
+
+Un JWT está dividido en tres partes:
+HEADER: Algoritmo y Tipo
+PAYLOAD: Usuarios, fecha, etc.
+SIGN: Firma, encripta los datos anteriores

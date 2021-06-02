@@ -1,0 +1,16 @@
+Para los que realizaron su proyecto con maven estos comandos les puede servir
+**Modo desarrollo **
+
+Ubicarse en la caperta raiz del proyecto y ejecutar el siguiente comando mvn clean package -DskipTests (Crear el artefacto)
+
+Después ubicarse a nivel de la carpeta target en donde se encuenta el .jar y ejecutar java -jar platzi-market-1.0.jar
+
+Modo producción
+
+deben volver a la carpeta raiz del proyecto y ejecutar el comando mvn clean package -DskipTests
+
+ubicarse nuevamente en la carpeta taget y ejecutar el comando java -jar -Dspring.profiles.active=pdn plazi-market-1.0.jar
+
+no olviden cambiar el puerto de produción 80 o el puerto que hayan puesto (Postman)
+
+Nota: si no tienen instalado Maven en su ordenador pueden utilizar el maven embebido que viene con el proyecto y remplazar mvn por mvnw en los comandos antes mencionados
